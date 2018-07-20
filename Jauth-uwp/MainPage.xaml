@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Jauth.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Jauth"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:v1803="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 6)"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loading="Page_Loading">
+
+    <Grid>
+        <NavigationView x:Name="nvMain"
+                        v1803:IsBackEnabled="False" v1803:IsBackButtonVisible="Collapsed" 
+                        AlwaysShowHeader="False"
+                        ItemInvoked="NavigationView_ItemInvoked">
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Uid="navConnect" x:Name="navConnect" 
+                                    Icon="World" Content="連線"
+                                    Tapped="navConnect_Tapped"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem x:Uid="navInfo" x:Name="navInfo" 
+                                    Tapped="navInfo_Tapped">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE946;"/>
+                    </NavigationViewItem.Icon>
+                    連線資訊
+                </NavigationViewItem>
+                <NavigationViewItem x:Uid="navLog" x:Name="navLog"
+                                    Icon="List" Content="日誌" 
+                                    Tapped="navLog_Tapped"/>
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="frmMain" />
+        </NavigationView>
+    </Grid>
+</Page>

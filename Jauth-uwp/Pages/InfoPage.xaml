@@ -1,0 +1,138 @@
+﻿<Page
+    x:Class="Jauth.InfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Jauth"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loading="Page_Loading">
+
+    <ScrollViewer>
+        <Grid>
+            <TextBlock x:Uid="tbConnectionInfo"
+                   Margin="16 50 0 0"
+                   FontSize="36"
+                   VerticalAlignment="Top"
+                   Text="連線資訊" />
+            <ListView Margin="0 120 0 50"
+                  IsItemClickEnabled="False" IsSwipeEnabled="False" 
+                  CanDragItems="False" SelectionMode="None">
+
+                <!-- JSESSIONID -->
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Contact" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock x:Uid="tbJSessionID"
+                                   FontWeight="Medium"
+                                   Text="會話 ID" />
+                            <TextBlock x:Name="txtSessionId" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- usermac -->
+                <ListViewItem Height="60" Background="{StaticResource SystemControlBackgroundChromeMediumLowBrush}">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE703;"/>
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock x:Uid="tbUserMac"
+                                   FontWeight="Medium"
+                                   Text="使用者 MAC" />
+                            <TextBlock x:Name="txtUserMac" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- userip -->
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Globe" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock x:Uid="tbUserIP"
+                                   FontWeight="Medium"
+                                   Text="使用者 IP" />
+                            <TextBlock x:Name="txtUserIP" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- deviceip -->
+                <ListViewItem Height="60" Background="{StaticResource SystemControlBackgroundChromeMediumLowBrush}">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Globe" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock x:Uid="tbDeviceIP"
+                                   FontWeight="Medium"
+                                   Text="裝置 IP" />
+                            <TextBlock x:Name="txtDeviceIP" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- mac -->
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Remote" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock FontWeight="Medium"
+                                   Text="mac" />
+                            <TextBlock x:Name="txtMac" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- wlancname -->
+                <ListViewItem Height="60" Background="{StaticResource SystemControlBackgroundChromeMediumLowBrush}">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Remote" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock FontWeight="Medium"
+                                   Text="wlancname" />
+                            <TextBlock x:Name="txtWlancname" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- url -->
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Remote" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock FontWeight="Medium"
+                                   Text="url" />
+                            <TextBlock x:Name="txtUrl" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- nasip -->
+                <ListViewItem Height="60" Background="{StaticResource SystemControlBackgroundChromeMediumLowBrush}">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Remote" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock FontWeight="Medium"
+                                   Text="nasip" />
+                            <TextBlock x:Name="txtNasip" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- wlanuserip -->
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <SymbolIcon Symbol="Remote" />
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock FontWeight="Medium"
+                                   Text="wlanuserip" />
+                            <TextBlock x:Name="txtWlanuserip" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+            </ListView>
+        </Grid>
+    </ScrollViewer>
+</Page>
