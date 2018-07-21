@@ -6,8 +6,13 @@ NotInheritable Class App : Inherits Application
     Protected Overrides Sub OnLaunched(e As LaunchActivatedEventArgs)
 
         ' Extend view into title bar
-        Dim titleBar = CoreApplication.GetCurrentView().TitleBar
-        titleBar.ExtendViewIntoTitleBar = True
+        Dim titleBarView = CoreApplication.GetCurrentView().TitleBar
+        titleBarView.ExtendViewIntoTitleBar = True
+
+        ' Make buttons transparent
+        Dim titleBar As ApplicationViewTitleBar = ApplicationView.GetForCurrentView().TitleBar
+        titleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent
+        titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Transparent
 
         ' Root window frame
         Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
