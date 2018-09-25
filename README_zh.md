@@ -30,5 +30,11 @@ Jauth 可以實現卓智 Web 認證。同時還能夠顯示套餐詳情，
 
 ## 螢幕截圖
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CYRO4S/jauth-windows/master/assets/jauth_screenshot.png" alt="jauth_screenshot">
+  <img src="https://raw.githubusercontent.com/CYRO4S/jauth-uwp/master/jauth_connect.png" alt="jauth_connect">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CYRO4S/jauth-uwp/master/jauth_info.png" alt="jauth_info">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CYRO4S/jauth-uwp/master/jauth_log.png" alt="jauth_log">
 </p>
