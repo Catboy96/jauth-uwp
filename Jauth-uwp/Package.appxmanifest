@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="61429CYROFROCE.NET.47541C3E52025" Publisher="CN=41A36B80-B8AC-444C-BBA2-F328EE2AF155" Version="1.1.1.0" />
+  <Identity Name="61429CYROFROCE.NET.47541C3E52025" Publisher="CN=Catboy96" Version="1.2.0.0" />
   <mp:PhoneIdentity PhoneProductId="47b49db6-d810-41b8-ad02-94acf1b70bdb" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Jauth</DisplayName>

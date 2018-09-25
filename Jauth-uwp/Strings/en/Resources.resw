@@ -318,4 +318,22 @@
   <data name="UI_NoAccountSpecified" xml:space="preserve">
     <value>No Account Specified</value>
   </data>
+  <data name="tbDataPlan.Text" xml:space="preserve">
+    <value>Data Plan</value>
+  </data>
+  <data name="tbRemaining.Text" xml:space="preserve">
+    <value>Remaining Time</value>
+  </data>
+  <data name="C_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="C_Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="C_Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="C_Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
 </root>

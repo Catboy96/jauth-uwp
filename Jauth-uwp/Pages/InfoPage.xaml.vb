@@ -10,6 +10,9 @@
         txtUrl.Text = If(Globals.data_url = "", "", Globals.data_url)
         txtNasip.Text = If(Globals.data_nasip = "", "", Globals.data_nasip)
         txtWlanuserip.Text = If(Globals.data_wlanuserip = "", "", Globals.data_wlanuserip)
+        txtDataPlan.Text = If(Globals.plan_name = "", "", Globals.plan_name)
+
+        txtRemaining.Text = Globals.plan_remaining.ToString()
     End Sub
 
 End Class

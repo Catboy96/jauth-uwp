@@ -20,6 +20,33 @@
                   IsItemClickEnabled="False" IsSwipeEnabled="False" 
                   CanDragItems="False" SelectionMode="None">
 
+                <!-- Data Plan -->
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE704;"/>
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock x:Uid="tbDataPlan"
+                                   FontWeight="Medium"
+                                   Text="使用中的套餐" />
+                            <TextBlock x:Name="txtDataPlan" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+                <!-- Remaining -->
+                <ListViewItem Height="60" Background="{StaticResource SystemControlBackgroundChromeMediumLowBrush}">
+                    <StackPanel Orientation="Horizontal" Margin="8 0 0 0">
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE823;"/>
+                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                            <TextBlock x:Uid="tbRemaining"
+                                   FontWeight="Medium"
+                                   Text="剩餘時長" />
+                            <TextBlock x:Name="txtRemaining" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </ListViewItem>
+
+
                 <!-- JSESSIONID -->
                 <ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal" Margin="8 0 0 0">

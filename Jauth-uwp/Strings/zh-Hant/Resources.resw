@@ -318,4 +318,22 @@
   <data name="UI_NoAccountSpecified" xml:space="preserve">
     <value>未設定認證帳戶</value>
   </data>
+  <data name="tbDataPlan.Text" xml:space="preserve">
+    <value>使用中的套餐</value>
+  </data>
+  <data name="tbRemaining.Text" xml:space="preserve">
+    <value>剩餘時長</value>
+  </data>
+  <data name="C_Days" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="C_Hours" xml:space="preserve">
+    <value>時</value>
+  </data>
+  <data name="C_Minutes" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="C_Seconds" xml:space="preserve">
+    <value>秒</value>
+  </data>
 </root>

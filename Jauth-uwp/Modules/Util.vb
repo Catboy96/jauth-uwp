@@ -6,11 +6,11 @@ Module Util
         Globals.log_content = Globals.log_content & $"[{Date.Now}] {Prompt}" & vbCrLf
     End Sub
 
-    Public Function CheckInternetAvailibility() As Boolean
+    Public Async Function CheckInternetAvailibility() As Task(Of Boolean)
         Dim req As New Net.WebClient
-        Dim ret As String
+        Dim ret As String = ""
         Try
-            ret = req.DownloadString("http://cdn.ralf.ren/res/portal.html")
+            ret = Await req.DownloadStringTaskAsync("http://cdn.ralf.ren/res/portal.html")
             If Not ret = "Success" Then
                 Return False
             Else
@@ -103,6 +103,36 @@ Module Util
             settings.Values.Add(NameOf(data_deviceip), data_deviceip)
         End If
 
+        If settings.Values.Keys.Contains(NameOf(plan_name)) Then
+            settings.Values(NameOf(plan_name)) = plan_name
+        Else
+            settings.Values.Add(NameOf(plan_name), plan_name)
+        End If
+
+        If settings.Values.Keys.Contains("plan_remaining_days") Then
+            settings.Values("plan_remaining_days") = plan_remaining.Days
+        Else
+            settings.Values.Add("plan_remaining_days", plan_remaining.Days)
+        End If
+
+        If settings.Values.Keys.Contains("plan_remaining_hours") Then
+            settings.Values("plan_remaining_hours") = plan_remaining.Hours
+        Else
+            settings.Values.Add("plan_remaining_hours", plan_remaining.Hours)
+        End If
+
+        If settings.Values.Keys.Contains("plan_remaining_minutes") Then
+            settings.Values("plan_remaining_minutes") = plan_remaining.Minutes
+        Else
+            settings.Values.Add("plan_remaining_minutes", plan_remaining.Minutes)
+        End If
+
+        If settings.Values.Keys.Contains("plan_remaining_seconds") Then
+            settings.Values("plan_remaining_seconds") = plan_remaining.Seconds
+        Else
+            settings.Values.Add("plan_remaining_seconds", plan_remaining.Seconds)
+        End If
+
     End Sub
 
     Public Sub LoadSettings()
@@ -120,9 +150,12 @@ Module Util
         data_usermac = settings.Values(NameOf(data_usermac))
         data_userip = settings.Values(NameOf(data_userip))
         data_deviceip = settings.Values(NameOf(data_deviceip))
+
+        plan_name = settings.Values(NameOf(plan_name))
+        plan_remaining.Days = settings.Values("plan_remaining_days")
+        plan_remaining.Hours = settings.Values("plan_remaining_hours")
+        plan_remaining.Minutes = settings.Values("plan_remaining_minutes")
+        plan_remaining.Seconds = settings.Values("plan_remaining_seconds")
     End Sub
-
-
-
 
 End Module

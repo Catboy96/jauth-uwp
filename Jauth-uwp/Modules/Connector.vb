@@ -28,7 +28,7 @@ Public Class Connector
     Public Sub Connect()
         Try
             ' Redirect to auth page
-            Dim reqRdr As New WebClient
+            Dim reqRdr As New Net.webclient
             Dim strRdrReturn As String = reqRdr.DownloadString("http://cdn.ralf.ren/res/portal.html")
             Dim strRdrUrl As String = strRdrReturn.Replace("<script>top.self.location.href='", "").Replace("'</script>", "").Trim
 
@@ -111,6 +111,18 @@ Public Class Connector
                 Logging($"{res.GetString("L_ExtractSessionData")} - userIp: {data_userip}")
                 data_deviceip = htmSuccess.DocumentNode.SelectSingleNode("//input[@name='deviceIp']").Attributes("value").Value
                 Logging($"{res.GetString("L_ExtractSessionData")} - deviceIp: {data_deviceip}")
+
+                plan_name = htmSuccess.DocumentNode.SelectSingleNode("//span[@class='packages']").InnerText.Replace("当前套餐：", "")
+                Logging($"{res.GetString("L_ExtractSessionData")} - plan: {plan_name}")
+
+                Dim plan_duration_text As String
+                plan_duration_text = htmSuccess.DocumentNode.SelectSingleNode("//span[@class='kysc']").InnerText.Replace("可用时长：", "").Trim()
+                Logging($"{res.GetString("L_ExtractSessionData")} - planDuration: {plan_duration_text}")
+
+                plan_remaining.Days = CInt(plan_duration_text.Split("天")(0))
+                plan_remaining.Hours = CInt(plan_duration_text.Split("天")(1).Split("时")(0))
+                plan_remaining.Minutes = CInt(plan_duration_text.Split("天")(1).Split("时")(1).Split("分")(0))
+                plan_remaining.Seconds = CInt(plan_duration_text.Split("天")(1).Split("时")(1).Split("分")(1).Split("秒")(0))
 
                 ' Done
                 RaiseEvent ConnectProgressChanged(ConnectProgress.AuthOK, "")
